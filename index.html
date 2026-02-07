@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arknights: Endfield - Windows PC Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #060a12;
+            color: #c8cdd6;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            flex: 0 0 38vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #060a12);
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5vh 2rem 1vh;
+            text-align: center;
+            background: #060a12;
+            position: relative;
+        }
+
+        h1 {
+            font-size: clamp(1.2rem, 2.4vw, 2rem);
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            line-height: 1.25;
+            margin-bottom: 0.8vh;
+        }
+
+        h1 span {
+            color: #00b4ff;
+        }
+
+        .subtitle {
+            font-size: clamp(0.6rem, 1vw, 0.82rem);
+            font-weight: 500;
+            color: #7a8ba8;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 2vh;
+        }
+
+        .bullets {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5vh;
+        }
+
+        .bullets li {
+            font-size: clamp(0.55rem, 0.85vw, 0.75rem);
+            font-weight: 500;
+            color: #9aa8bf;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bullets li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #00b4ff;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 3.5rem;
+            background: linear-gradient(135deg, #0090e0 0%, #00b4ff 50%, #0090e0 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 180, 255, 0.4);
+            box-shadow: 0 0 20px rgba(0, 180, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin-bottom: 2.5vh;
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+        }
+
+        .cta:hover {
+            box-shadow: 0 0 35px rgba(0, 180, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .cta:active {
+            transform: translateY(0);
+        }
+
+        .disclaimer {
+            font-family: sans-serif;
+            font-size: 0.6rem;
+            color: #3a4255;
+            letter-spacing: 0.02em;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+
+        @media (max-height: 700px) {
+            .hero {
+                flex: 0 0 32vh;
+            }
+            .content {
+                padding: 1vh 2rem 0.5vh;
+            }
+            .bullets {
+                gap: 1.2rem;
+                margin-bottom: 1.8vh;
+            }
+            .cta {
+                padding: 0.8rem 2.8rem;
+                margin-bottom: 1.5vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bullets {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <img src="arknights-endfield-pc-gameplay.jpg" alt="Arknights Endfield PC Gameplay">
+        </div>
+        <div class="content">
+            <h1>Deploy to the Endfield on <span>Windows PC</span></h1>
+            <p class="subtitle">Access via official launcher &mdash; full PC client required</p>
+            <ul class="bullets">
+                <li>Windows PC only</li>
+                <li>Official launcher required</li>
+                <li>Installation required to play</li>
+            </ul>
+            <a href="{{AFFILIATE_LINK}}" class="cta">Continue to Official Page</a>
+            <p class="disclaimer">This page provides access information only. Game availability subject to regional restrictions and system requirements.</p>
+        </div>
+    </div>
+</body>
+</html>
